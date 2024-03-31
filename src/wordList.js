@@ -1,0 +1,46 @@
+const words = [
+  'banana', 'canyon', 'camera', 'dragon', 'eagle', 'forest', 'guitar', 'hammer', 'igloo', 'jacket',
+  'kettle', 'lemon', 'mango', 'napkin', 'ocean', 'pencil', 'quartz', 'rabbit', 'sushi', 'tomato',
+  'umbrella', 'violet', 'walrus', 'xylophone', 'yacht', 'zebra', 'apricot', 'balloon', 'cactus', 'dolphin',
+  'eraser', 'feather', 'giraffe', 'harmonica', 'island', 'jacket', 'kangaroo', 'llama', 'muffin', 'nectarine',
+  'orange', 'panda', 'quilt', 'raccoon', 'soccer', 'turtle', 'unicorn', 'volcano', 'waffle', 'xylophone',
+  'yogurt', 'zigzag', 'anchor', 'butterfly', 'castle', 'dinosaur', 'elephant', 'flamingo', 'garden', 'helicopter',
+  'iceberg', 'jellyfish', 'koala', 'leopard', 'mushroom', 'necktie', 'octopus', 'penguin', 'quesadilla', 'rainbow',
+  'seashell', 'trumpet', 'umbrella', 'violin', 'waterfall', 'xylophone', 'yacht', 'zebra', 'acorn', 'basket',
+  'candle', 'donkey', 'eggplant', 'firefly', 'gorilla', 'honeycomb', 'igloo', 'jaguar', 'kiwi', 'lantern',
+  'mango', 'nugget', 'ostrich', 'pineapple', 'quokka', 'rhino', 'sandwich', 'tiger', 'umbrella', 'vulture',
+  'walrus', 'xylophone', 'yoyo', 'zebra', 'asparagus', 'blueberry', 'carrot', 'daffodil', 'eclipse', 'flamingo',
+  'grapefruit', 'hedgehog', 'iceberg', 'juniper', 'kangaroo', 'lilac', 'meerkat', 'narwhal', 'octopus', 'parrot',
+  'quail', 'rabbit', 'seahorse', 'tulip', 'ukulele', 'vampire', 'walrus', 'xylophone', 'yak', 'zebra',
+  'apricot', 'bonsai', 'cinnamon', 'dolphin', 'eel', 'fern', 'garlic', 'hamster', 'iguana', 'jasmine',
+  'kite', 'lavender', 'manatee', 'nightingale', 'ocelot', 'peach', 'quince', 'raccoon', 'sunflower', 'toucan',
+  'umbrella', 'violet', 'whale', 'xylophone', 'yam', 'zeppelin', 'almond', 'beaver', 'chestnut', 'dragonfly',
+  'elk', 'flamingo', 'gazelle', 'hippo', 'ibex', 'jaguar', 'kangaroo', 'lemur', 'magpie', 'newt',
+  'octopus', 'penguin', 'quetzal', 'reindeer', 'starfish', 'tortoise', 'urchin', 'vulture', 'walrus', 'xylophone',
+  'yak', 'zebra', 'apricot', 'bison', 'camel', 'dolphin', 'echidna', 'falcon', 'giraffe', 'hyena',
+  'ibis', 'jackal', 'koala', 'llama', 'meerkat', 'numbat', 'opossum', 'platypus', 'quokka', 'raccoon',
+  'sloth', 'tapir', 'umbrella', 'vole', 'wombat', 'xylophone', 'yak', 'zebra', 'alpaca', 'baboon',
+  'cheetah', 'dingo', 'emu', 'flamingo', 'gorilla', 'hyena', 'impala', 'jaguar', 'kangaroo', 'lemur',
+  'meerkat', 'numbat', 'ostrich', 'pangolin', 'quokka', 'rhino', 'sloth', 'tiger', 'uakari', 'vicuna',
+  'walrus', 'xerus', 'yak', 'zebra', 'aardvark', 'bobcat', 'capybara', 'dingo', 'elk', 'fox',
+  'giraffe', 'hedgehog', 'ibex', 'jackal', 'koala', 'lynx', 'marmot', 'numbat', 'ocelot', 'puma',
+  'quokka', 'raccoon', 'skunk', 'tapir', 'uakari', 'vole', 'wombat', 'xerus', 'yak', 'zebra',
+  'alpaca', 'bison', 'cheetah', 'dingo', 'emu', 'fox', 'gazelle', 'hyena', 'impala', 'jackal',
+  'kangaroo', 'lemur', 'meerkat', 'numbat', 'ostrich', 'pangolin', 'quokka', 'rhino', 'sloth', 'tiger',
+  'uakari', 'vicuna', 'walrus', 'xerus', 'yak', 'zebra', 'aardvark', 'baboon', 'capybara', 'dingo',
+  'echidna', 'fox', 'giraffe', 'hyena', 'ibex', 'jackal', 'koala', 'lemur', 'marmot', 'numbat',
+  'ocelot', 'pangolin', 'quokka', 'raccoon', 'sloth', 'tapir', 'uakari', 'vole', 'wombat', 'xerus',
+  'yak', 'zebra', 'alpaca', 'bison', 'cheetah', 'dingo', 'emu', 'fox', 'gazelle', 'hyena',
+  'impala', 'jackal', 'kangaroo', 'lemur', 'meerkat', 'numbat', 'ostrich', 'pangolin', 'quokka', 'rhino',
+  'sloth', 'tiger', 'uakari', 'vicuna', 'walrus', 'xerus', 'yak', 'zebra', 'aardvark', 'baboon',
+  'capybara', 'dingo', 'echidna', 'fox', 'giraffe', 'hyena', 'ibex', 'jackal', 'koala', 'lemur',
+  'marmot', 'numbat', 'ocelot', 'pangolin', 'quokka', 'raccoon', 'sloth', 'tapir', 'uakari', 'vole',
+  'wombat', 'xerus', 'yak', 'zebra', 'alpaca', 'bison', 'cheetah', 'dingo', 'emu', 'fox',
+  'gazelle', 'hyena', 'impala', 'jackal', 'kangaroo', 'lemur', 'meerkat', 'numbat', 'ostrich', 'pangolin',
+  'quokka', 'rhino', 'sloth', 'tiger', 'uakari', 'vicuna', 'walrus', 'xerus', 'yak', 'zebra'
+];
+
+export const selectRandomWord = () => {
+  const randomIndex = Math.floor(Math.random() * words.length);
+  return words[randomIndex];
+};
