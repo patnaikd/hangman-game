@@ -50,8 +50,16 @@ const Game = () => {
     <div>
       <h1>Hangman</h1>
       <Hangman incorrectGuesses={incorrectGuesses} />
-      <WordBlanks selectedWord={selectedWord} guessedLetters={guessedLetters} />
-      <LetterInput onGuess={handleGuess} disabled={gameStatus !== 'playing'} />
+      <WordBlanks
+        selectedWord={selectedWord}
+        guessedLetters={guessedLetters}
+        gameStatus={gameStatus}
+      />
+      <LetterInput
+        onGuess={handleGuess}
+        disabled={gameStatus !== 'playing'}
+        selectedWord={selectedWord}
+      />
       <GameStatus gameStatus={gameStatus} resetGame={resetGame} />
     </div>
   );

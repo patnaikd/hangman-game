@@ -1,6 +1,6 @@
 import React from 'react';
 
-const WordBlanks = ({ selectedWord, guessedLetters }) => {
+const WordBlanks = ({ selectedWord, guessedLetters, gameStatus }) => {
   const renderBlanks = () => {
     return selectedWord.split('').map((letter, index) => {
       if (guessedLetters.includes(letter.toLowerCase())) {
@@ -10,7 +10,13 @@ const WordBlanks = ({ selectedWord, guessedLetters }) => {
           </span>
         );
       } else {
-        return <span key={index} className="blank">_</span>;
+        return gameStatus === 'lost' ? (
+          <span key={index} className="missed-letter">
+            {letter}
+          </span>
+        ) : (
+          <span key={index} className="blank">_</span>
+        );
       }
     });
   };

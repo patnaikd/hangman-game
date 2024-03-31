@@ -75,6 +75,7 @@
 }
 
 .word-blanks .letter,
+.word-blanks .missed-letter,
 .word-blanks .blank {
   display: inline-block;
   width: 30px;
@@ -171,4 +172,9 @@ footer {
 
 .game-status button:focus {
   outline: 2px solid #000;
+}
+
+.word-blanks .missed-letter {
+  color: red;
+  text-decoration: line-through;
 }

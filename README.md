@@ -2,6 +2,9 @@
 
 This is a classic Hangman game implementation using React. The game allows players to guess a word by selecting letters one at a time. The objective is to guess the word correctly before the hangman figure is fully drawn.
 
+<img src="hangman.png" alt="Hangman Game" width="300" align="center">
+
+
 ## Live Demo
 
 You can play the Hangman game live at: [https://hangman-game-0.web.app/](https://hangman-game-0.web.app/)

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const LetterInput = ({ onGuess, disabled }) => {
+const LetterInput = ({ onGuess, disabled, selectedWord }) => {
   const [letter, setLetter] = useState('');
   const [usedLetters, setUsedLetters] = useState([]);
 
@@ -10,7 +10,7 @@ const LetterInput = ({ onGuess, disabled }) => {
       if (/^[a-z]$/.test(typedLetter)) {
         onGuess(typedLetter);
         setLetter('');
-        if (!usedLetters.includes(typedLetter)) {
+        if (!selectedWord.includes(typedLetter) && !usedLetters.includes(typedLetter)) {
           setUsedLetters([...usedLetters, typedLetter]);
         }
       }
@@ -23,7 +23,7 @@ const LetterInput = ({ onGuess, disabled }) => {
     return () => {
       window.removeEventListener('keydown', handleKeyPress);
     };
-  }, [onGuess, disabled, usedLetters]);
+  }, [onGuess, disabled, selectedWord, usedLetters]);
 
   return (
     <div className="letter-input">
