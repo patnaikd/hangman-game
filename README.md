@@ -2,6 +2,10 @@
 
 This is a classic Hangman game implementation using React. The game allows players to guess a word by selecting letters one at a time. The objective is to guess the word correctly before the hangman figure is fully drawn.
 
+## Live Demo
+
+You can play the Hangman game live at: [https://hangman-game-0.web.app/](https://hangman-game-0.web.app/)
+
 ## Features
 
 - Random word selection from a predefined list of words
@@ -18,6 +22,7 @@ This is a classic Hangman game implementation using React. The game allows playe
 - JavaScript
 - HTML
 - CSS
+- Firebase (for hosting)
 
 ## Getting Started
 
@@ -51,7 +56,7 @@ To run the Hangman game locally on your machine, follow these steps:
 - The player guesses letters one at a time to uncover the word.
 - For each incorrect guess, a part of the hangman figure is drawn.
 - The game ends when either the word is guessed correctly (player wins) or the hangman figure is fully drawn (player loses).
-- The player can restart the game by clicking the "Play Again" button.
+- The player can restart the game by clicking the "Play Again" button or pressing the space bar.
 
 ## Project Structure
 
@@ -85,6 +90,19 @@ hangman-game/
 - The `App.css` file contains the styles for the game.
 - The `index.js` file is the entry point of the application.
 - The `wordList.js` file contains the list of words used in the game.
+
+## Deployment
+
+The Hangman game is hosted on Firebase. To deploy the game to your own Firebase project, follow these steps:
+
+1. Create a new Firebase project in the Firebase Console.
+2. Install the Firebase CLI by running `npm install -g firebase-tools`.
+3. Log in to Firebase using `firebase login`.
+4. Initialize your project for Firebase hosting using `firebase init hosting`.
+5. Build your React app using `npm run build`.
+6. Deploy your app to Firebase hosting using `firebase deploy --only hosting`.
+
+For detailed instructions, please refer to the [Firebase Hosting documentation](https://firebase.google.com/docs/hosting).
 
 ## Contributing
 
