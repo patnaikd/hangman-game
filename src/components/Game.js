@@ -57,8 +57,8 @@ const Game = () => {
       />
       <LetterInput
         onGuess={handleGuess}
-        disabled={gameStatus !== 'playing'}
         selectedWord={selectedWord}
+        gameStatus={gameStatus}
       />
       <GameStatus gameStatus={gameStatus} resetGame={resetGame} />
     </div>

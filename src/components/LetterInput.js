@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
-const LetterInput = ({ onGuess, disabled, selectedWord }) => {
+const LetterInput = ({ onGuess, selectedWord, gameStatus }) => {
+  const disabled = gameStatus !== 'playing';
+
   const [letter, setLetter] = useState('');
   const [usedLetters, setUsedLetters] = useState([]);
 
@@ -24,6 +26,12 @@ const LetterInput = ({ onGuess, disabled, selectedWord }) => {
       window.removeEventListener('keydown', handleKeyPress);
     };
   }, [onGuess, disabled, selectedWord, usedLetters]);
+
+  useEffect(() => {
+    if (gameStatus === 'playing') {
+      setUsedLetters([]);
+    }
+  }, [gameStatus]);  
 
   return (
     <div className="letter-input">
